@@ -20,13 +20,19 @@ function fetchBookmarks(){
             bookmarkResults.innerHTML += `<div class="well">
                                                 <h3>${name}
                                                 <a class="btn btn-default" target="_blank" href="http://${url}">Visit</a>
-                                                <a onclick="deleteBookmark('${url}')" class="btn btn-danger" href="#">Delete</a>
+                                                <a class="delete btn btn-danger" href="#">Delete</a>
                                                 </h3>
                                                 </div>`;
-            
             } 
+        // Add eventListener to Delete Buttons
+        var deleteButtons = bookmarkResults.querySelectorAll(".delete");
+        for (var j = 0; j < deleteButtons.length; j++){
+            deleteButtons[j].addEventListener("click", deleteBookmark(url));
+        };
     }
          
 }
 
 export { fetchBookmarks };
+
+//onclick="deleteBookmark('${url}')"

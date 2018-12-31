@@ -1,5 +1,8 @@
+import { fetchBookmarks } from './fetchBookmarks';
+
 // Delete bookmark
 function deleteBookmark(url){
+    return function() {
     // Get bookmarks from localStorage
     var bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
     for (var i = 0; i < bookmarks.length; i++){
@@ -13,6 +16,7 @@ function deleteBookmark(url){
 
     // Re-fetch bookmarks
     fetchBookmarks();
+    }
 }
 
 export { deleteBookmark };

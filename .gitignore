@@ -1,3 +1,4 @@
 /node_modules
+/dist
 backup.txt
 src/js/appTemp.js
