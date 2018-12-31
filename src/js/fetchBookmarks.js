@@ -27,12 +27,10 @@ function fetchBookmarks(){
         // Add eventListener to Delete Buttons
         var deleteButtons = bookmarkResults.querySelectorAll(".delete");
         for (var j = 0; j < deleteButtons.length; j++){
-            deleteButtons[j].addEventListener("click", deleteBookmark(url));
+            deleteButtons[j].addEventListener("click", deleteBookmark.bind(this, url));
         };
     }
          
 }
 
 export { fetchBookmarks };
-
-//onclick="deleteBookmark('${url}')"
