@@ -26,11 +26,18 @@ module.exports = {
         ]
     },
     plugins: [
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            template: "src/index.html",
+        }),
+        
+        new HtmlWebpackPlugin({
+            filename: "bookmarker.html",
+            template: "src/html/bookmarker.html"
+        }),
         new MiniCssExtractPlugin({
             filename: "main.css",
-        }),
-        new HtmlWebpackPlugin({
-            template: "src/index.html"
+            chunkFilename: "[id].css"
         })
     ]
 };

@@ -77,3 +77,18 @@ body {
       border-bottom: 0;
     }
   }
+
+  /*Custom Jumbotron classes for main page*/
+  
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  
